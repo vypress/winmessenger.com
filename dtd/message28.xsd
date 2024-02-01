@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:wmmsg="http://www.winmessenger.com/message28" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://www.winmessenger.com/message28" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:simpleType name="NetBIOS_name_string">
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:element name="message">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="from">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" />
+							<xs:element name="netbios_name" type="wmmsg:NetBIOS_name_string" minOccurs="0" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="to">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" />
+							<xs:element name="netbios_name" type="wmmsg:NetBIOS_name_string" minOccurs="0" maxOccurs="1" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="text" type="xs:string" />
+				<xs:element name="send_result" minOccurs="0" maxOccurs="1">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="result">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="name" type="xs:string" />
+										<xs:element name="netbios_name" type="wmmsg:NetBIOS_name_string" minOccurs="0" maxOccurs="1" />
+										<xs:element name="description" />
+									</xs:sequence>
+									<xs:attribute name="error" type="xs:unsignedInt" use="required" />
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="type" type="xs:string" use="required" />
+			<xs:attribute name="datetime" type="xs:dateTime" use="required" />
+			<xs:attribute name="unread" type="xs:boolean" use="optional" default="false"/>
+			<xs:attribute name="sent" type="xs:boolean" use="optional" default="false" />
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

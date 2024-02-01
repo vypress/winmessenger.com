@@ -1,0 +1,25 @@
+[PDF]
+Version=1.0 
+
+[Package Definition]
+Product=WinMessenger
+Version=1.7.1
+Comment=VyPRESS Research, LLC
+SetupVariations=Typical, Automated
+
+[Typical Setup]
+CommandName = Typical Installation
+CommandLine = WinMessenger171.exe
+UserInputRequired = TRUE
+SynchronousSystemExitRequired = TRUE
+SupportedPlatforms = Win 9x, Win NT (i386)
+
+[Automated Setup]
+CommandName = Automated Installation
+CommandLine = WinMessenger171.exe /q:a
+UserInputRequired = FALSE
+SynchronousSystemExitRequired = TRUE
+SupportedPlatforms = Win 9x, Win NT (i386)
+
+[Setup Package for Inventory]
+InventoryThisPackage=FALSE

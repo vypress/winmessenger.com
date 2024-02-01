@@ -1,0 +1,26 @@
+[PDF]
+Version=2.0 
+
+[Package Definition]
+Name=WinMessenger
+Publisher=VyPRESS Research, LLC
+Version=1.7.1
+Language=English
+Programs=Typical, Automated
+
+[Typical]
+Name = Typical
+CommandLine = WinMessenger171.exe
+UserInputRequired = TRUE
+UninstallKey={AEB9D4A0-199B-4dfa-A18D-E2DD5D989EDF}
+AfterRunning=ProgramRestart
+SupportedClients = Win 9x, Win NT (i386)
+
+[Automated]
+Name = Automated
+CommandLine = WinMessenger171.exe /q:a
+UserInputRequired = FALSE
+UninstallKey={AEB9D4A0-199B-4dfa-A18D-E2DD5D989EDF}
+AfterRunning=ProgramRestart
+SupportedClients = Win 9x, Win NT (i386)
+

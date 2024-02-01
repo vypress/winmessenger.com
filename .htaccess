@@ -1,0 +1,45 @@
+ErrorDocument 404 /404.php
+DirectoryIndex index.php index.html
+IndexIgnore *
+#HeaderName set Cache-Control "post-check=900,pre-check=3600,proxy-revalidate"
+
+#php_value output_handler ob_gzhandler
+
+Options +FollowSymLinks 
+
+#ExpiresActive on
+#ExpiresDefault A18000
+#ExpiresByType image/gif A2592000
+#ExpiresByType image/jpeg A2592000
+#ExpiresByType image/png A2592000
+
+RewriteEngine on
+
+#All existing files
+RewriteCond %{REQUEST_FILENAME} -s
+RewriteRule (.+) - [L]
+
+#Directories
+#RewriteCond %{REQUEST_FILENAME} -d
+#RewriteRule ^(.+[^/])$ $1/ [R,L]
+
+#Other products
+RewriteRule WinMessenger28.*x64\.(exe|zip|msi)$ /files/WinMessenger2805x64.msi [R=301,NC,L]
+RewriteRule WinMessenger28.*\.(exe|zip|msi)$ /files/WinMessenger2805.msi [R=301,NC,L]
+RewriteRule WinMessenger.*\.(exe|zip|msi)$ /files/WinMessenger201.exe [R=301,NC,L]
+RewriteRule VyChat.*\.(exe|zip|msi)$ /files/VyChat219.msi [R=301,NC,L]
+RewriteRule VyMes.*\.(exe|zip|msi)$ /files/VyMes403.msi [R=301,NC,L]
+RewriteRule Auvis.*\.(exe|zip|msi)$ /files/Auvis30.msi [R=301,NC,L]
+RewriteRule NWSend.*\.(exe|zip|msi)$ /files/NWSend50.msi [R=301,NC,L]
+RewriteRule Tonecast.*\.(exe|zip|msi)$ /files/Tonecast13.exe [R=301,NC,L]
+RewriteRule SafeKuvert.*x64\.(exe|zip|msi)$ /files/SafeKuvert102x64.msi [R=301,NC,L]
+RewriteRule SafeKuvert.*\.(exe|zip|msi)$ /files/SafeKuvert102.msi [R=301,NC,L]
+
+RedirectPermanent /ru http://www.winmessenger.com/rus
+RedirectPermanent /fr http://www.winmessenger.com/fra
+RedirectPermanent /de http://www.winmessenger.com/deu
+RedirectPermanent /es http://www.winmessenger.com/spa
+RedirectPermanent /esp http://www.winmessenger.com/spa
+RedirectPermanent /it http://www.winmessenger.com/ita
+RedirectPermanent /ja http://www.winmessenger.com/jpn
+RedirectPermanent /message28 http://www.winmessenger.com/dtd/message28.xsd

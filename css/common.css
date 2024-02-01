@@ -1,0 +1,209 @@
+body
+{
+	background-color:White;
+	color:Black;
+	font-size:small;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	text-align: center;
+	margin-top: 5px;
+	padding-top: 0px;
+}
+
+h1
+{
+	display:none;
+	visibility:hidden;
+	clear: both;
+}
+
+h2, h3, h4
+{
+	font-family: "Trebuchet MS", Verdana, Geneva, Arial, Helvetica, sans-serif;
+	line-height:1.5em;
+	clear: both;
+}
+
+h2
+{
+	font-size:x-large;
+	color: #6A6A6A;
+	clear: both;
+}
+
+h4
+{
+	font-size:large;
+	clear: both;
+}
+
+h5
+{
+	border: thin double #448CCB;
+	padding: 0pt 2pt 0pt 2pt;
+	background-color: #F0F8FF;
+	color:Navy;
+	clear: both;
+}
+
+a img { border-width: 0; }
+
+a:link { color:#448CCB; }
+
+a:visited { color:Navy; }
+
+a:active { color:#D25005; }
+
+a:hover { color: #D25005; }
+
+div.hr
+{
+	height: 30px;
+	background: #fff url(../img/pix/dotted_line_shortest.gif) no-repeat scroll center;
+}
+
+.hidden_block
+{
+	display:none;
+	visibility:hidden;
+}
+
+div.centered_bar
+{
+	text-align:center;
+	color:#448CCB;
+	clear:both;
+	margin: 4px auto 4px auto;
+}
+
+div.main_content
+{
+	width: 582px;/*620 - padding-left-rigth - 2*border-width*/
+	border: solid 4px #448CCB;
+	padding: 10px 15px 10px 15px;
+	text-align:left;
+	/* Set left and right margins to auto, thus centering the element in the containing (body) tag: */
+	margin: auto auto auto auto;
+	clear: both;
+}
+
+div.lang_bar
+{
+	width: 620px;
+	text-align:right;
+	color:#448CCB;
+	/* Set left and right margins to auto, thus centering the element in the containing (body) tag: */
+	margin: auto auto auto auto;
+	clear: both;
+}
+
+div.logo
+{
+	width: 620px;
+	height: 96px;
+	text-align:center;
+	background-color:#448CCB;
+	padding: 14px 0px 10px 0px;
+	/* Set left and right margins to auto, thus centering the element in the containing (body) tag: */
+	margin: 2px auto 0px auto;
+	clear: both;
+}
+
+div.news
+{
+	width: 620px;
+	text-align:right;
+	clear: both;
+	padding: 0px 0px 4px 0px;
+	margin: 0px auto 4px auto;
+	background-color:#448CCB;
+	line-height:normal;
+}
+
+div.bottom_slogan
+{
+	width: 620px;
+	text-align:center;
+	clear: both;
+	color: white;
+	background-color:#448CCB;
+	padding: 2px 0;
+	margin: 0 auto;
+}
+
+div.news a:link { color:White; }
+
+div#adv
+{
+	width: 620px;
+	color:#448CCB;
+	/* Set left and right margins to auto, thus centering the element in the containing (body) tag: */
+	margin: auto;
+	font-size: xx-small;
+	text-align: left;
+}
+
+#adv ul
+{
+	margin: 0;
+	list-style: none;
+}
+
+#adv p
+{
+	margin: 0;
+}
+
+div.footer 
+{
+	color:#448CCB;
+	/* Set left and right margins to auto, thus centering the element in the containing (body) tag: */
+	margin: 8px auto auto auto;
+	clear: both;
+}
+
+/*Used by order.html only*/
+p.footnote
+{
+	margin: auto 30px auto 30px;
+	font-size: 80%;
+}
+/*end* order.html only*/
+
+/*Used by index.html only*/
+.floating_block
+{
+	float: right;
+}
+
+a.floating_block, img.floating_block
+{
+	display: block;
+	margin: 15px 0 15px 15px;
+}
+
+dl.floating_block
+{
+	float: right;
+	clear: both;
+}
+
+.floating_block dt
+{
+	display: none;
+}
+
+.floating_block dd
+{
+	text-align: right;
+	font-size: 85%;
+	margin-left: 10px;
+}
+/*end* index.html only*/
+
+/*Used by download.html only*/
+.dlList
+{
+	list-style-image: url(../img/pix/icodownl.gif);
+}
+/*end* download.html only*/

@@ -1,0 +1,56 @@
+ErrorDocument 404 /404.html
+Options +Includes          
+DirectoryIndex re.php index.html
+IndexIgnore *
+php_value output_handler ob_gzhandler
+Header set Cache-Control: 'post-check=900,pre-check=3600,proxy-revalidate'
+Header set pics-label: '(pics-1.1 "http://www.icra.org/ratingsv02.html" comment "ICRAonline EN v2.0" l r (nz 1 vz 1 lz 1 oz 1 cz 1) "http://www.rsac.org/ratingsv01.html" l r (n 0 s 0 v 0 l 0))'
+
+Options +FollowSymLinks 
+
+#this stops screen flicker in IE
+BrowserMatch "MSIE" brokenvary=1
+BrowserMatch "Mozilla/4.[0-9]{2}" brokenvary=1
+BrowserMatch "Opera" !brokenvary
+SetEnvIf brokenvary 1 force-no-vary
+
+ExpiresActive On
+ExpiresDefault A18000
+ExpiresByType image/gif A2592000
+ExpiresByType image/jpeg A2592000
+ExpiresByType image/png A2592000
+
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_URI}% WinMessenger.*\.(exe|zip|msi) [NC]
+RewriteRule (.*) /files/WinMessenger201.exe [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_URI}% VyChat.*\.(exe|zip|msi) [NC]
+RewriteRule (.*) /files/VyChat21.msi [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_URI}% VyMes.*\.(exe|zip|msi) [NC]
+RewriteRule (.*) /files/VyMes40.msi [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_URI}% Auvis.*\.(exe|zip|msi) [NC]
+RewriteRule (.*) /files/Auvis30.msi [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-s
+RewriteCond %{REQUEST_URI}% NWSend.*\.(exe|zip|msi) [NC]
+RewriteRule (.*) /files/NWSend50.msi [R=301,L]
+
+RedirectPermanent /messenger.asp http://www.vypress.com/products/messenger/
+RedirectPermanent /rus/auvis.asp http://www.vypress.com/products/auvis/
+RedirectPermanent /vm-features.html http://www.vypress.com/products/messenger/
+RedirectPermanent /vm30.asp http://www.vypress.com/products/messenger/
+RedirectPermanent /vm28.asp http://www.vypress.com/products/messenger/
+RedirectPermanent /default.asp http://www.vypress.com/
+RedirectPermanent /ru http://www.winmessenger.com/rus/
+RedirectPermanent /fr http://www.winmessenger.com/fra/
+RedirectPermanent /de http://www.winmessenger.com/deu/
+RedirectPermanent /es http://www.winmessenger.com/esp/
+RedirectPermanent /it http://www.winmessenger.com/ita/
+
+

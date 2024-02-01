@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    XHTML 1.1-with Target
+-->
+<!--
+    ENTITIES XHTML 
+    data types module for basic data types
+-->
+<!ENTITY % xhtml-datatypes.module "INCLUDE"> 
+  <![%xhtml-datatypes.module;[ 
+    <!ENTITY % xhtml-datatypes.mod 
+      PUBLIC "-//W3C//ENTITIES XHTML Datatypes 1.0//EN"
+      "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-datatypes-1.mod"> 
+%xhtml-datatypes.mod;]]>
+<!--
+    ENTITIES Qualified Name  
+    namespace declarations and parameter entities
+-->
+<!ENTITY % xhtml-qname.module "INCLUDE"> 
+  <![%xhtml-qname.module;[ 
+    <!ENTITY % xhtml-qname.mod 
+      PUBLIC "-//W3C//ENTITIES XHTML Qualified Names 1.0//EN"
+      "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-qname-1.mod"> 
+%xhtml-qname.mod;]]>
+<!-- 
+    XHTML 1.1 driver DTD
+-->
+<!ENTITY % xhtml11.dtd 
+  PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+%xhtml11.dtd;
+<!-- 
+    Target Module
+-->
+<!ENTITY % xhtml-target.module "INCLUDE">
+  <![%xhtml-target.module;[ 
+    <!ENTITY % xhtml-target.mod 
+      PUBLIC "-//W3C//ELEMENTS XHTML Target Module//EN"
+      "http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-target-1.mod"> 
+%xhtml-target.mod;]]>

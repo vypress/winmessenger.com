@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Bring in the XHTML 1.1 driver -->
+<!ENTITY % xhtml11.dtd 
+PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+%xhtml11.dtd;
+
+<!-- Bring in the Target Module -->
+<!ENTITY % xhtml-target.mod
+
+PUBLIC "-//W3C//ELEMENTS XHTML Target 1.0//EN" 
+"http://www.w3.org/TR/xhtml-modularization/DTD/xhtml-target-1.mod">
+%xhtml-target.mod;
