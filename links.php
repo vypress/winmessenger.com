@@ -18,7 +18,7 @@ define('WM_FILE_SIZE_VER20', '725');
 define('WM_FILE_SIZE_VER21', '590');
 
 define('DOWNLOAD_1_20', '<a href="../files/WinMessenger20.exe">WinMessenger20.exe</a>');
-define('DOWNLOAD_2_20', '<a href="http://www.vypress.com/ftp/WinMessenger201.exe">WinMessenger20.exe</a>');
+define('DOWNLOAD_2_20', '<a href="https://www.vypress.com/ftp/WinMessenger201.exe">WinMessenger20.exe</a>');
 define('DOWNLOAD_3_20', '<a href="ftp://ftp.winmessenger.com/WinMessenger201.exe">WinMessenger20.exe</a>');
 define('DOWNLOAD_21', '<a href="../files/WinMessenger21.exe">WinMessenger21.exe</a>');
 
